@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="CALCULA — Smart Calculator and everyday conversion tools.">
+
+    <title>CALCULA — Smart Tools</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">▦</div>
+
+                <div>
+                    <h1>CALCULA</h1>
+                    <span>Smart Tools</span>
+                </div>
+            </div>
+
+            <button class="close-menu" id="closeMenu">×</button>
+
+            <nav>
+
+                <button class="nav-item active" data-page="home">
+                    🏠 <span>Home</span>
+                </button>
+
+                <button class="nav-item" data-page="calculator">
+                    🧮 <span>Calculator</span>
+                </button>
+
+                <button class="nav-item" data-page="currency">
+                    💱 <span>Currency Converter</span>
+                </button>
+
+                <button class="nav-item" data-page="unit">
+                    📦 <span>Unit Converter</span>
+                </button>
+
+                <button class="nav-item" data-page="weight">
+                    ⚖️ <span>Weight Converter</span>
+                </button>
+
+                <button class="nav-item" data-page="length">
+                    📏 <span>Length Converter</span>
+                </button>
+
+                <button class="nav-item" data-page="temperature">
+                    🌡️ <span>Temperature Converter</span>
+                </button>
+
+                <button class="nav-item" data-page="time">
+                    ⏱️ <span>Time Converter</span>
+                </button>
+
+                <button class="nav-item" data-page="percentage">
+                    % <span>Percentage Calculator</span>
+                </button>
+
+                <button class="nav-item" data-page="loan">
+                    💰 <span>Loan Calculator</span>
+                </button>
+
+                <button class="nav-item" data-page="bmi">
+                    ⚖️ <span>BMI Calculator</span>
+                </button>
+
+                <button class="nav-item" data-page="age">
+                    🎂 <span>Age Calculator</span>
+                </button>
+
+                <button class="nav-item" data-page="about">
+                    ℹ️ <span>About</span>
+                </button>
+
+            </nav>
+
+            <div class="quote">
+                <strong>
+                    "Small tools<br>
+                    make big dreams<br>
+                    possible."
+                </strong>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <button class="menu-button" id="menuButton">
+                    ☰
+                </button>
+
+                <div>
+                    <span class="eyebrow">
+                        SMART TOOLS FOR EVERYDAY LIFE
+                    </span>
+
+                    <h2 id="pageTitle">
+                        Calculate. Convert. Save Time.
+                    </h2>
+                </div>
+
+                <button class="theme-button" id="themeButton">
+                    ☀️
+                </button>
+
+            </header>
+
+
+            <!-- HOME -->
+            <section class="page active" id="home">
+
+                <div class="hero">
+
+                    <span class="badge">
+                        ALL-IN-ONE TOOLKIT
+                    </span>
+
+                    <h1>
+                        Smart tools for
+                        <span>everyday life.</span>
+                    </h1>
+
+                    <p>
+                        Calculate, convert, plan and manage
+                        everyday numbers from one beautiful dashboard.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button class="primary" data-open="calculator">
+                            Open Calculator
+                        </button>
+
+                        <button class="secondary" data-open="currency">
+                            Convert Currency
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard">
+
+                    <!-- CALCULATOR CARD -->
+                    <div class="card">
+
+                        <div class="card-title">
+
+                            <div class="title-left">
+                                <div class="icon">🧮</div>
+
+                                <div>
+                                    <h3>Calculator</h3>
+                                    <p>Basic + advanced calculations</p>
+                                </div>
+                            </div>
+
+                            <button class="link-button"
+                                data-open="calculator">
+                                Open →
+                            </button>
+
+                        </div>
+
+                        <div class="mini-display">
+                            <small id="homeExpression">
+                                Ready
+                            </small>
+
+                            <strong id="homeResult">
+                                0
+                            </strong>
+                        </div>
+
+                        <div class="mini-buttons">
+                            <span>AC</span>
+                            <span>%</span>
+                            <span>⌫</span>
+                            <span>÷</span>
+
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>×</span>
+
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>−</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- HISTORY -->
+                    <div class="card">
+
+                        <div class="card-title">
+
+                            <div class="title-left">
+
+                                <div class="icon">
+                                    ↺
+                                </div>
+
+                                <div>
+                                    <h3>History</h3>
+                                    <p>Your recent calculations</p>
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="link-button"
+                                id="homeClearHistory">
+                                Clear
+                            </button>
+
+                        </div>
+
+                        <div id="homeHistory"
+                            class="home-history">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK TOOLS -->
+                    <div class="card">
+
+                        <div class="card-title">
+
+                            <div class="title-left">
+
+                                <div class="icon">
+                                    ⚡
+                                </div>
+
+                                <div>
+                                    <h3>Quick Tools</h3>
+                                    <p>Access useful converters</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-tools">
+
+                            <button data-open="currency">
+                                💱
+
+                                <span>
+                                    <strong>Currency Converter</strong>
+                                    <small>USD, INR, EUR & more</small>
+                                </span>
+
+                                →
+                            </button>
+
+
+                            <button data-open="unit">
+                                📦
+
+                                <span>
+                                    <strong>Unit Converter</strong>
+                                    <small>Length, weight, volume</small>
+                                </span>
+
+                                →
+                            </button>
+
+
+                            <button data-open="temperature">
+                                🌡️
+
+                                <span>
+                                    <strong>Temperature</strong>
+                                    <small>°C, °F and K</small>
+                                </span>
+
+                                →
+                            </button>
+
+
+                            <button data-open="loan">
+                                💰
+
+                                <span>
+                                    <strong>Loan Calculator</strong>
+                                    <small>EMI, interest, tenure</small>
+                                </span>
+
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CALCULATOR -->
+            <section class="page" id="calculator">
+
+                <div class="section-heading">
+
+                    <span class="badge">
+                        CALCULATOR
+                    </span>
+
+                    <h1>
+                        Powerful everyday calculator
+                    </h1>
+
+                    <p>
+                        Keyboard supported • Enter = calculate • Esc = clear
+                    </p>
+
+                </div>
+
+
+                <div class="calculator-layout">
+
+                    <div class="card calculator-card">
+
+                        <div class="display">
+
+                            <div id="expression">
+                                0
+                            </div>
+
+                            <strong id="result">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="calculator-buttons">
+
+                            <button class="function"
+                                data-value="AC">
+                                AC
+                            </button>
+
+                            <button class="function"
+                                data-value="(">
+                                (
+                            </button>
+
+                            <button class="function"
+                                data-value=")">
+                                )
+                            </button>
+
+                            <button class="function"
+                                data-value="⌫">
+                                ⌫
+                            </button>
+
+
+                            <button class="function"
+                                data-value="sqrt">
+                                √
+                            </button>
+
+                            <button class="function"
+                                data-value="square">
+                                x²
+                            </button>
+
+                            <button class="function"
+                                data-value="%">
+                                %
+                            </button>
+
+                            <button class="operator"
+                                data-value="÷">
+                                ÷
+                            </button>
+
+
+                            <button data-value="7">7</button>
+                            <button data-value="8">8</button>
+                            <button data-value="9">9</button>
+
+                            <button class="operator"
+                                data-value="×">
+                                ×
+                            </button>
+
+
+                            <button data-value="4">4</button>
+                            <button data-value="5">5</button>
+                            <button data-value="6">6</button>
+
+                            <button class="operator"
+                                data-value="−">
+                                −
+                            </button>
+
+
+                            <button data-value="1">1</button>
+                            <button data-value="2">2</button>
+                            <button data-value="3">3</button>
+
+                            <button class="operator"
+                                data-value="+">
+                                +
+                            </button>
+
+
+                            <button class="function"
+                                data-value="±">
+                                ±
+                            </button>
+
+                            <button class="zero"
+                                data-value="0">
+                                0
+                            </button>
+
+                            <button data-value=".">
+                                .
+                            </button>
+
+                            <button class="equals"
+                                data-value="=">
+                                =
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HISTORY -->
+                    <div class="card history-card">
+
+                        <div class="card-title">
+
+                            <div>
+                                <h3>History</h3>
+                                <p>Saved in your browser</p>
+                            </div>
+
+                            <button
+                                class="clear-button"
+                                id="clearHistory">
+                                Clear
+                            </button>
+
+                        </div>
+
+                        <div id="historyList"
+                            class="history-list">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CURRENCY -->
+            <section class="page" id="currency">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        CONVERTER
+                    </span>
+
+                    <h1>Currency Converter</h1>
+
+                    <p>
+                        Convert common currencies instantly.
+                    </p>
+
+
+                    <div class="card converter">
+
+                        <label>
+                            Amount
+
+                            <input
+                                id="currencyAmount"
+                                type="number"
+                                value="1">
+                        </label>
+
+
+                        <label>
+                            From
+
+                            <select id="currencyFrom"></select>
+                        </label>
+
+
+                        <button class="swap"
+                            id="currencySwap">
+                            ⇄ Swap
+                        </button>
+
+
+                        <label>
+                            To
+
+                            <select id="currencyTo"></select>
+                        </label>
+
+
+                        <div class="answer">
+
+                            <small>
+                                Converted amount
+                            </small>
+
+                            <strong id="currencyResult">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- UNIT -->
+            <section class="page" id="unit">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        CONVERTER
+                    </span>
+
+                    <h1>Unit Converter</h1>
+
+                    <p>
+                        Length, weight and volume in one place.
+                    </p>
+
+
+                    <div class="card converter">
+
+                        <label>
+                            Category
+
+                            <select id="unitCategory">
+
+                                <option value="length">
+                                    Length
+                                </option>
+
+                                <option value="weight">
+                                    Weight
+                                </option>
+
+                                <option value="volume">
+                                    Volume
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                        <label>
+                            Value
+
+                            <input
+                                id="unitValue"
+                                type="number"
+                                value="1">
+                        </label>
+
+
+                        <label>
+                            From
+
+                            <select id="unitFrom"></select>
+                        </label>
+
+
+                        <label>
+                            To
+
+                            <select id="unitTo"></select>
+                        </label>
+
+
+                        <div class="answer">
+
+                            <small>
+                                Result
+                            </small>
+
+                            <strong id="unitResult">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- WEIGHT -->
+            <section class="page" id="weight">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        WEIGHT
+                    </span>
+
+                    <h1>Weight Converter</h1>
+
+                    <p>
+                        Convert kg, g, lb, oz and tonnes.
+                    </p>
+
+
+                    <div class="card converter">
+
+                        <label>
+                            Value
+
+                            <input
+                                id="weightValue"
+                                type="number"
+                                value="1">
+                        </label>
+
+
+                        <label>
+                            From
+
+                            <select id="weightFrom"></select>
+                        </label>
+
+
+                        <label>
+                            To
+
+                            <select id="weightTo"></select>
+                        </label>
+
+
+                        <div class="answer">
+
+                            <small>
+                                Result
+                            </small>
+
+                            <strong id="weightResult">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- LENGTH -->
+            <section class="page" id="length">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        LENGTH
+                    </span>
+
+                    <h1>Length Converter</h1>
+
+                    <p>
+                        Convert mm, cm, m, km, inch, ft and miles.
+                    </p>
+
+
+                    <div class="card converter">
+
+                        <label>
+                            Value
+
+                            <input
+                                id="lengthValue"
+                                type="number"
+                                value="1">
+                        </label>
+
+
+                        <label>
+                            From
+
+                            <select id="lengthFrom"></select>
+                        </label>
+
+
+                        <label>
+                            To
+
+                            <select id="lengthTo"></select>
+                        </label>
+
+
+                        <div class="answer">
+
+                            <small>
+                                Result
+                            </small>
+
+                            <strong id="lengthResult">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TEMPERATURE -->
+            <section class="page" id="temperature">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        TEMPERATURE
+                    </span>
+
+                    <h1>Temperature Converter</h1>
+
+                    <p>
+                        Convert Celsius, Fahrenheit and Kelvin.
+                    </p>
+
+
+                    <div class="card converter">
+
+                        <label>
+                            Value
+
+                            <input
+                                id="tempValue"
+                                type="number"
+                                value="25">
+                        </label>
+
+
+                        <label>
+                            From
+
+                            <select id="tempFrom">
+
+                                <option>°C</option>
+                                <option>°F</option>
+                                <option>K</option>
+
+                            </select>
+
+                        </label>
+
+
+                        <label>
+                            To
+
+                            <select id="tempTo">
+
+                                <option>°F</option>
+                                <option>°C</option>
+                                <option>K</option>
+
+                            </select>
+
+                        </label>
+
+
+                        <div class="answer">
+
+                            <small>Result</small>
+
+                            <strong id="tempResult">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TIME -->
+            <section class="page" id="time">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        TIME
+                    </span>
+
+                    <h1>Time Converter</h1>
+
+                    <p>
+                        Convert seconds, minutes, hours and days.
+                    </p>
+
+
+                    <div class="card converter">
+
+                        <label>
+                            Value
+
+                            <input
+                                id="timeValue"
+                                type="number"
+                                value="1">
+                        </label>
+
+
+                        <label>
+                            From
+
+                            <select id="timeFrom">
+
+                                <option>Seconds</option>
+                                <option>Minutes</option>
+                                <option>Hours</option>
+                                <option>Days</option>
+
+                            </select>
+
+                        </label>
+
+
+                        <label>
+                            To
+
+                            <select id="timeTo">
+
+                                <option>Minutes</option>
+                                <option>Seconds</option>
+                                <option>Hours</option>
+                                <option>Days</option>
+
+                            </select>
+
+                        </label>
+
+
+                        <div class="answer">
+
+                            <small>Result</small>
+
+                            <strong id="timeResult">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PERCENTAGE -->
+            <section class="page" id="percentage">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        PERCENTAGE
+                    </span>
+
+                    <h1>Percentage Calculator</h1>
+
+                    <p>
+                        Find percentages quickly.
+                    </p>
+
+
+                    <div class="two-cards">
+
+                        <div class="card form-card">
+
+                            <label>
+                                What is
+                                <input id="pctA"
+                                    type="number"
+                                    value="20">
+                                % of
+                                <input id="pctB"
+                                    type="number"
+                                    value="500">
+                                ?
+                            </label>
+
+                            <button
+                                class="primary"
+                                id="pctButton">
+                                Calculate
+                            </button>
+
+                            <strong
+                                class="big-answer"
+                                id="pctResult">
+                                100
+                            </strong>
+
+                        </div>
+
+
+                        <div class="card form-card">
+
+                            <label>
+                                <input id="pctC"
+                                    type="number"
+                                    value="100">
+
+                                is what % of
+
+                                <input id="pctD"
+                                    type="number"
+                                    value="500">
+                                ?
+                            </label>
+
+                            <button
+                                class="primary"
+                                id="pctButton2">
+                                Calculate
+                            </button>
+
+                            <strong
+                                class="big-answer"
+                                id="pctResult2">
+                                20%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOAN -->
+            <section class="page" id="loan">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        FINANCE
+                    </span>
+
+                    <h1>Loan / EMI Calculator</h1>
+
+                    <p>
+                        Estimate monthly payment and interest.
+                    </p>
+
+
+                    <div class="two-cards">
+
+                        <div class="card form-card">
+
+                            <label>
+                                Loan Amount
+
+                                <input
+                                    id="loanAmount"
+                                    type="number"
+                                    value="500000">
+                            </label>
+
+
+                            <label>
+                                Annual Interest %
+
+                                <input
+                                    id="loanRate"
+                                    type="number"
+                                    value="8.5"
+                                    step="0.1">
+                            </label>
+
+
+                            <label>
+                                Tenure (Years)
+
+                                <input
+                                    id="loanYears"
+                                    type="number"
+                                    value="5">
+                            </label>
+
+
+                            <button
+                                class="primary"
+                                id="loanButton">
+                                Calculate EMI
+                            </button>
+
+                        </div>
+
+
+                        <div class="card results-card">
+
+                            <div>
+                                <small>Monthly EMI</small>
+                                <strong id="emi">—</strong>
+                            </div>
+
+                            <div>
+                                <small>Total Interest</small>
+                                <strong id="interest">—</strong>
+                            </div>
+
+                            <div>
+                                <small>Total Payment</small>
+                                <strong id="payment">—</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BMI -->
+            <section class="page" id="bmi">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        BMI TOOL
+                    </span>
+
+                    <h1>BMI Calculator</h1>
+
+                    <p>
+                        Enter height and weight for a quick BMI estimate.
+                    </p>
+
+
+                    <div class="two-cards">
+
+                        <div class="card form-card">
+
+                            <label>
+                                Weight (kg)
+
+                                <input
+                                    id="bmiWeight"
+                                    type="number"
+                                    value="70">
+                            </label>
+
+
+                            <label>
+                                Height (cm)
+
+                                <input
+                                    id="bmiHeight"
+                                    type="number"
+                                    value="175">
+                            </label>
+
+
+                            <button
+                                class="primary"
+                                id="bmiButton">
+                                Calculate BMI
+                            </button>
+
+                        </div>
+
+
+                        <div class="card results-card">
+
+                            <div>
+                                <small>Your BMI</small>
+                                <strong id="bmiResult">—</strong>
+                            </div>
+
+                            <div>
+                                <small>Category</small>
+                                <strong id="bmiCategory">—</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- AGE -->
+            <section class="page" id="age">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        AGE TOOL
+                    </span>
+
+                    <h1>Age Calculator</h1>
+
+                    <p>
+                        Calculate your age from your date of birth.
+                    </p>
+
+
+                    <div class="two-cards">
+
+                        <div class="card form-card">
+
+                            <label>
+                                Date of Birth
+
+                                <input
+                                    id="dob"
+                                    type="date">
+                            </label>
+
+
+                            <button
+                                class="primary"
+                                id="ageButton">
+                                Calculate Age
+                            </button>
+
+                        </div>
+
+
+                        <div class="card results-card">
+
+                            <div>
+                                <small>Your Age</small>
+                                <strong id="ageResult">—</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ABOUT -->
+            <section class="page" id="about">
+
+                <div class="tool">
+
+                    <span class="badge">
+                        ABOUT
+                    </span>
+
+                    <h1>CALCULA</h1>
+
+
+                    <div class="card about-card">
+
+                        <h3>
+                            More than just a calculator.
+                        </h3>
+
+                        <p>
+                            CALCULA is a responsive HTML, CSS and
+                            JavaScript project combining calculation,
+                            conversions and useful everyday tools
+                            into one modern interface.
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                            <span>Local Storage</span>
+
+                        </div>
+
+
+                        <p class="muted">
+                            Built as a portfolio project by
+                            <strong>
+                                Purushottam Kumar Sharma
+                            </strong>.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+                Built with ❤️ using HTML, CSS & JavaScript
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
